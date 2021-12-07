@@ -3,6 +3,13 @@ channels:
 dependencies:
   - numpy
   - pandas
+  - PyYAML
+  - matplotlib
+  - scikit-learn
+  - seaborn
+  - joblib
+  - bokeh
+  - pytest
   - jupyter-server-proxy
   - code-server >=3.2
   - pynvim 
