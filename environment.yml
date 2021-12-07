@@ -6,6 +6,7 @@ dependencies:
   - code-server >=3.2
   - pynvim 
   - neovim
+  - greenlet
   - flake8 
   - pylint 
   - isort
