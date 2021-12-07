@@ -4,3 +4,4 @@ git
 curl 
 exuberant-ctags 
 ack-grep
+tofrodos
