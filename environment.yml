@@ -4,3 +4,8 @@ dependencies:
   - numpy
   - jupyter-server-proxy
   - code-server >=3.2
+  - pynvim 
+  - neovim
+  - flake8 
+  - pylint 
+  - isort

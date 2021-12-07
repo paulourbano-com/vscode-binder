@@ -1,1 +1,6 @@
 vim
+htop
+git 
+curl 
+exuberant-ctags 
+ack-grep
