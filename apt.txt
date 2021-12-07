@@ -1,4 +1,5 @@
 vim
+neovim
 htop
 git 
 curl 
