@@ -1,5 +1,7 @@
 vim
 neovim
+python-neovim
+python3-neovim
 htop
 git 
 curl 
