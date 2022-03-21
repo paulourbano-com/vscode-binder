@@ -1,0 +1,21 @@
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - PyYAML
+  - matplotlib
+  - scikit-learn
+  - seaborn
+  - joblib
+  - bokeh
+  - pytest
+  - jupyter-server-proxy
+  - code-server >=3.2
+  - pynvim 
+  - neovim
+  - greenlet
+  - flake8 
+  - pylint 
+  - isort
+diff --git a/environment.yml b/environment.yml
