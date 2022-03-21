@@ -5,4 +5,4 @@
 
 VS Code on Binder, because sometimes you need a real editor.
 
-Try it: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/paulourbano-com/vscode-binder/extended-patches?urlpath=lab)
+Try it: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/paulourbano-com/vscode-binder/dockerfile-based?urlpath=lab)
