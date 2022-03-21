@@ -73,7 +73,7 @@ COPY . ${HOME}/repo_contents
 RUN pip3 install -e ${HOME}/repo_contents
 
 RUN chown -R ${NB_UID} ${HOME}
-ENV PIPENV_PIPFILE=${HOME}/repo_contents/Pipfile
+# ENV PIPENV_PIPFILE=${HOME}/repo_contents/Pipfile
 USER ${NB_USER}
 RUN python3 -m pipenv install --dev
 RUN printf 'export -n PIPENV_PIPFILE\nalias cat=batcat' >> ${HOME}/.bashrc
