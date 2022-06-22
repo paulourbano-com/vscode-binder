@@ -1,0 +1,37 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+dask = "*"
+networkx = "*"
+pytimedinput = "*"
+tqdm = "*"
+pyodbc = "*"
+sqlalchemy = "*"
+matplotlib = "*"
+scikit-learn = "*"
+cvxpy = "*"
+scipy = "*"
+dvc = {extras = ["azure"], version = "==2.9.3"}
+xgboost = "*"
+
+[dev-packages]
+ipython = "*"
+black = "*"
+pylint = "*"
+pytest = "*"
+mypy = "*"
+types-pyyaml = "*"
+git-pylint-commit-hook = "*"
+pytest-cov = "*"
+seaborn = "*"
+reorder-python-imports = "2.6.0"
+pipenv = "*"
+build = "*"
+isort = "*"
+
+[requires]
+python_version = "3.8"
