@@ -70,6 +70,7 @@ RUN mkdir ${HOME}/.vscode && printf '{ \n\
 
 COPY . .
 RUN pip3 install -e .
+RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 RUN python3 -m pipenv install
 RUN printf 'export -n PIPENV_PIPFILE\n\
