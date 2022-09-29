@@ -72,7 +72,7 @@ COPY . .
 RUN pip3 install -e .
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
-RUN python3 -m pipenv install
+RUN python3 -m pipenv install --dev
 RUN printf 'export -n PIPENV_PIPFILE\n\
             alias cat=batcat\n\
             export GRADLE_HOME=/opt/gradle/latest\n\
