@@ -4,19 +4,27 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pandas = "*"
+pandas = "==1.4.1"
 dask = "*"
 networkx = "*"
+pygraphviz = {version = "*", sys_platform = "!= 'win32'"}
 pytimedinput = "*"
+snowflake-connector-python = "*"
 tqdm = "*"
 pyodbc = "*"
 sqlalchemy = "*"
+pydot = "*"
 matplotlib = "*"
+ortools = "*"
 scikit-learn = "*"
+snowflake-sqlalchemy = "*"
 cvxpy = "*"
 scipy = "*"
+grpcio = "*"
+grpcio-tools = "*"
 dvc = {extras = ["azure"], version = "==2.9.3"}
-xgboost = "*"
+xgboost = "==1.6.1"
+psycopg2-binary = "*"
 
 [dev-packages]
 ipython = "*"
@@ -28,7 +36,7 @@ types-pyyaml = "*"
 git-pylint-commit-hook = "*"
 pytest-cov = "*"
 seaborn = "*"
-reorder-python-imports = "2.6.0"
+reorder-python-imports = "*"
 pipenv = "*"
 build = "*"
 isort = "*"
