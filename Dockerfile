@@ -52,6 +52,7 @@ RUN code-server --install-extension richardwillis.vscode-gradle
 RUN code-server --install-extension valentjn.vscode-ltex
 RUN code-server --install-extension anwar.papyrus-pdf
 RUN code-server --install-extension quarto.quarto
+RUN code-server --install-extension bungcip.better-toml
 RUN mkdir ${HOME}/.vscode && printf '{ \n\
 "explorer.autoReveal": false,\n\
 "workbench.colorTheme": "Default Dark+",\n\
