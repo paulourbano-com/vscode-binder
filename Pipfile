@@ -9,7 +9,7 @@ dask = "*"
 networkx = "*"
 pygraphviz = {version = "*", sys_platform = "!= 'win32'"}
 pytimedinput = "*"
-snowflake-connector-python = "*"
+snowflake-connector-python[pandas] = "*"
 tqdm = "*"
 pyodbc = "*"
 sqlalchemy = "*"
