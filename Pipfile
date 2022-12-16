@@ -25,6 +25,7 @@ grpcio-tools = "*"
 dvc = {extras = ["azure"], version = "==2.9.3"}
 xgboost = "==1.6.1"
 psycopg2-binary = "*"
+visidata = "*"
 
 [dev-packages]
 ipython = "*"
