@@ -40,6 +40,8 @@ reorder-python-imports = "*"
 pipenv = "*"
 build = "*"
 isort = "*"
+visidata = "*"
+commitizen = "*"
 
 [requires]
 python_version = "3.8"
