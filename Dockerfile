@@ -73,7 +73,12 @@ COPY . .
 RUN pip3 install -e .
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
+RUN mkdir .venv
 RUN python3 -m pipenv install --dev
+RUN .venv/bin/pip install fsspec==2022.11.0
+RUN mkdir .config/nvim
+RUN curl https://raw.github.com/fisadev/fisa-vim-config/v12.0.1/config.vim > .config/nvim/init.vim
+RUN curl https://raw.githubusercontent.com/vimlab/split-term.vim/master/plugin/split-term.vim >> .config/nvim/init.vim
 RUN printf 'export -n PIPENV_PIPFILE\n\
             alias cat=batcat\n\
             export GRADLE_HOME=/opt/gradle/latest\n\
