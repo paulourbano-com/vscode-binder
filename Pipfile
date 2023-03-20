@@ -44,6 +44,9 @@ visidata = "*"
 commitizen = "*"
 fsspec = "==2022.11.0"
 openpyxl = "*"
+pynvim = "*"
+flake8 = "*"
+jedi = "*"
 
 [requires]
 python_version = "3.8"
