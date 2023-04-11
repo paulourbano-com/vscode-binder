@@ -1,12 +1,15 @@
 {
-    "files.exclude": {
-        "**/.bashrc": true,
-        "**/.cache": true,
-        "**/.config": true,
-        "**/.jupyter": true,
-        "**/.local": true,
-        "**/.npm": true,
-        "**/.yarn": true,
-        "**/jupyter_vscode_proxy.egg-info": true
-    }
+    "explorer.autoReveal": false,
+    "workbench.colorTheme": "Default Dark+",
+    "autoDocstring.docstringFormat": "numpy",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.sendKeybindingsToShell": false,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "terminal.integrated.wordSeparators": " ()[]{},\"`-/",
+    "terminal.integrated.scrollback": 10000
 }
