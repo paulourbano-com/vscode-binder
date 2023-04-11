@@ -44,6 +44,7 @@ RUN jupyter-labextension install @jupyterlab/server-proxy
 RUN jupyter-lab build
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN code-server --install-extension ms-python.python
+RUN code-server --install-extension ms-python.pylint
 RUN code-server --install-extension njpwerner.autodocstring 
 RUN code-server --install-extension mechatroner.rainbow-csv
 RUN code-server --install-extension jebbs.plantuml
