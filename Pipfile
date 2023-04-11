@@ -47,6 +47,9 @@ openpyxl = "*"
 pynvim = "*"
 flake8 = "*"
 jedi = "*"
+dateparser = "*"
+pandasql = "*"
+parse = "*"
 
 [requires]
 python_version = "3.8"
