@@ -54,21 +54,7 @@ RUN code-server --install-extension valentjn.vscode-ltex
 RUN code-server --install-extension anwar.papyrus-pdf
 RUN code-server --install-extension quarto.quarto
 RUN code-server --install-extension bungcip.better-toml
-RUN mkdir ${HOME}/.vscode && printf '{ \n\
-"explorer.autoReveal": false,\n\
-"workbench.colorTheme": "Default Dark+",\n\
-"autoDocstring.docstringFormat": "numpy",\n\
-"terminal.integrated.copyOnSelection": true,\n\
-"terminal.integrated.sendKeybindingsToShell": false,\n\
-"python.testing.unittestEnabled": false,\n\
-"python.testing.pytestEnabled": true,\n\
-"python.formatting.provider": "black",\n\
-"editor.formatOnSave": true,\n\
-"python.linting.enabled": true,\n\
-"python.linting.pylintEnabled": true,\n\
-"terminal.integrated.wordSeparators": " ()[]{},\"`-/"\n\
-}' > ${HOME}/.vscode/settings.json
-
+RUN code-server --install-extension vscodevim.vim
 
 COPY . .
 RUN pip3 install -e .
