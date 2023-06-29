@@ -25,6 +25,7 @@ grpcio-tools = "*"
 dvc = {extras = ["azure"], version = "==2.9.3"}
 xgboost = "==1.6.1"
 psycopg2-binary = "*"
+tzlocal = "==2.1"
 
 [dev-packages]
 ipython = "*"
@@ -50,6 +51,7 @@ jedi = "*"
 dateparser = "*"
 pandasql = "*"
 parse = "*"
+pytest-xdist = "*"
 
 [requires]
 python_version = "3.8"
