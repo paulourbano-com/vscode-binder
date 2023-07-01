@@ -49,8 +49,7 @@ RUN mkdir .venv
 RUN python3 -m pipenv install --dev
 RUN .venv/bin/pip install fsspec==2022.11.0 protobuf==3.20.0
 RUN mkdir -p .config/nvim
-RUN curl https://raw.githubusercontent.com/fisadev/fisa-vim-config/v12.0.1/config.vim > .config/nvim/init.vim
-RUN curl https://raw.githubusercontent.com/vimlab/split-term.vim/master/plugin/split-term.vim >> .config/nvim/init.vim
+RUN cp init.vim .config/nvim/
 RUN echo 'set foldmethod=indent' >> .config/nvim/init.vim
 RUN echo 'set foldlevelstart=9999' >> .config/nvim/init.vim
 RUN echo 'set mouse=n' >> .config/nvim/init.vim
