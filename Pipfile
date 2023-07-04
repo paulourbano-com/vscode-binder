@@ -54,5 +54,3 @@ parse = "*"
 pytest-xdist = "*"
 doq = "*"
 
-[requires]
-python_version = "3.8"

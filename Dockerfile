@@ -1,11 +1,11 @@
-FROM ubuntu:focal-20230308
+FROM ubuntu:jammy-20230605
 ENV TZ=America/Phoenix
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update && apt-get install -y curl
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install -y nodejs
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-RUN curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+RUN curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 RUN apt-get update && apt-get install -y sudo iputils-ping vim neovim gzip\
     python3-neovim python3-neovim htop git curl python3-pip\
     exuberant-ctags ack-grep python3-distutils unzip tmux \
@@ -13,13 +13,13 @@ RUN apt-get update && apt-get install -y sudo iputils-ping vim neovim gzip\
     libssl-dev zlib1g-dev libbz2-dev libreadline-dev openjdk-11-jdk \
     libsqlite3-dev wget llvm libncursesw5-dev xz-utils tk-dev \
     libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev unixodbc-dev \
-    software-properties-common python-dev pkg-config tig bat screen \
+    software-properties-common python-dev-is-python3 pkg-config tig bat screen \
     firefox libdbus-glib-1-2 libdbusmenu-glib4 libdbusmenu-gtk3-4 xul-ext-ubufox \
     texlive texlive-xetex
 RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17
-RUN wget https://downloads.gradle-dn.com/distributions/gradle-7.4.2-bin.zip -P /tmp && \
-    unzip -d /opt/gradle /tmp/gradle-7.4.2-bin.zip && \
-    sudo ln -s /opt/gradle/gradle-7.4.2 /opt/gradle/latest
+#RUN wget https://downloads.gradle-dn.com/distributions/gradle-7.4.2-bin.zip -P /tmp && \
+#    unzip -d /opt/gradle /tmp/gradle-7.4.2-bin.zip && \
+#    sudo ln -s /opt/gradle/gradle-7.4.2 /opt/gradle/latest
 RUN wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_linux_amd64.deb && \
     dpkg -i browsh_1.6.4_linux_amd64.deb && \
     rm browsh_1.6.4_linux_amd64.deb
