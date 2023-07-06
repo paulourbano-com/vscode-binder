@@ -1,0 +1,21 @@
+{
+"configurations": {
+    
+    "Python": {
+      "adapter": "debugpy",
+      "configuration": {
+        "request": "launch",
+        "program": "${file}",
+        "justMyCode#json": "true",
+        "stopOnEntry": true
+      },
+    
+      "breakpoints": {
+        "exception": {
+          "raised": "",
+          "caught": "",
+          "uncaught": "Y"
+        }
+      }
+    }
+	}
