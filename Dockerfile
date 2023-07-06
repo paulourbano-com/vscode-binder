@@ -48,14 +48,11 @@ USER ${NB_USER}
 RUN mkdir .venv
 RUN python3 -m pipenv install --dev
 RUN .venv/bin/pip install fsspec==2022.11.0 protobuf==3.20.0
-RUN mkdir -p .config/nvim
-RUN cp init.vim .config/nvim/
-RUN echo 'set foldmethod=indent' >> .config/nvim/init.vim
-RUN echo 'set foldlevelstart=9999' >> .config/nvim/init.vim
-RUN echo 'set mouse=n' >> .config/nvim/init.vim
+RUN curl -sLf https://spacevim.org/install.sh | bash
 RUN printf 'export -n PIPENV_PIPFILE\n\
             alias cat=batcat\n\
             export GRADLE_HOME=/opt/gradle/latest\n\
-            export PATH=${GRADLE_HOME}/bin:${PATH}' >> ${HOME}/.bashrc
+            export PATH=${GRADLE_HOME}/bin:${PATH}\n\
+            source .venv/bin/activate' >> ${HOME}/.bashrc
 RUN git config --global user.name "" && git config --global user.email ""
 RUN mkdir .ssh
