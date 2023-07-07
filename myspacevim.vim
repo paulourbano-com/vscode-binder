@@ -13,4 +13,7 @@ function! myspacevim#after() abort
     nmap ,F :Lines<CR>
     nmap ,wF :execute ":Lines " . expand('<cword>')<CR>
     nmap ,c :Commands<CR>
+	let g:pydocstring_doq_path = "/home/jovyan/.venv/bin/doq"
+	let g:pydocstring_formatter = 'numpy'
+  let g:ale_linters = { "python": ["ruff"] }
 endfunction

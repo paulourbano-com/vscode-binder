@@ -44,7 +44,11 @@ default_height = 30
 
 [[layers]]
   name = "lang#python"
-  python_interpreter = '/home/jovyan/.venv/bin/python'
+  python_interpreter = '/home/paulo/Documents/as-refuel-analytics/.venv/bin/python' 
+  python_file_head = [
+      '',
+      ''
+  ]
 
 [[layers]]
   name = "debug"
@@ -55,6 +59,12 @@ default_height = 30
 
 [[layers]]
   name = "fzf"
+
+[[layers]]
+  name = "test"
+
+[[layers]]
+  name = "lsp"
 
 [[custom_plugins]]
   name = "junegunn/fzf"
@@ -71,3 +81,18 @@ default_height = 30
 [[custom_plugins]]
   name = "heavenshell/vim-pydocstring"
   merged = true
+
+[[custom_plugins]]
+  name = "tarekbecker/vim-yaml-formatter"
+  merged = true
+
+[[custom_plugins]]
+  name = "airblade/vim-gitgutter"
+  merged = true
+
+[[custom_plugins]]
+  name = "dense-analysis/ale"
+  merged = true
+
+
+
