@@ -23,8 +23,8 @@ RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17
 RUN wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_linux_amd64.deb && \
     dpkg -i browsh_1.6.4_linux_amd64.deb && \
     rm browsh_1.6.4_linux_amd64.deb
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.610/quarto-0.9.610-linux-amd64.deb && \
-    dpkg -i quarto-0.9.610-linux-amd64.deb && \
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb && \
+    dpkg -i quarto-1.3.450-linux-amd64.deb && \
     rm quarto-0.9.610-linux-amd64.deb
 ARG NB_USER=jovyan
 ARG NB_UID=1000
