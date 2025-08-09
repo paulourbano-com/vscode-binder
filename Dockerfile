@@ -38,7 +38,6 @@ RUN code-server --install-extension njpwerner.autodocstring
 RUN code-server --install-extension mechatroner.rainbow-csv
 RUN code-server --install-extension jebbs.plantuml
 RUN code-server --install-extension fwcd.kotlin
-RUN code-server --install-extension richardwillis.vscode-gradle
 RUN code-server --install-extension valentjn.vscode-ltex
 RUN code-server --install-extension anwar.papyrus-pdf
 RUN code-server --install-extension quarto.quarto
@@ -69,4 +68,5 @@ RUN printf 'export -n PIPENV_PIPFILE\n\
             export GRADLE_HOME=/opt/gradle/latest\n\
             export PATH=${GRADLE_HOME}/bin:${PATH}' >> ${HOME}/.bashrc
 RUN git config --global user.name "" && git config --global user.email ""
+
 
