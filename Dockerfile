@@ -59,7 +59,7 @@ RUN mkdir ${HOME}/.vscode && printf '{ \n\
 
 
 COPY . .
-RUN pip3 install -e .
+#RUN pip3 install -e .
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 RUN python3 -m pipenv install --dev --skip-lock
@@ -68,6 +68,7 @@ RUN printf 'export -n PIPENV_PIPFILE\n\
             export GRADLE_HOME=/opt/gradle/latest\n\
             export PATH=${GRADLE_HOME}/bin:${PATH}' >> ${HOME}/.bashrc
 RUN git config --global user.name "" && git config --global user.email ""
+
 
 
 
