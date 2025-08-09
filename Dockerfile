@@ -16,16 +16,6 @@ RUN apt-get update && apt-get install -y sudo iputils-ping vim neovim gzip\
     software-properties-common python-dev pkg-config tig bat screen \
     firefox libdbus-glib-1-2 libdbusmenu-glib4 libdbusmenu-gtk3-4 xul-ext-ubufox \
     texlive texlive-xetex
-RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17
-RUN wget https://downloads.gradle-dn.com/distributions/gradle-7.4.2-bin.zip -P /tmp && \
-    unzip -d /opt/gradle /tmp/gradle-7.4.2-bin.zip && \
-    sudo ln -s /opt/gradle/gradle-7.4.2 /opt/gradle/latest
-RUN wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_linux_amd64.deb && \
-    dpkg -i browsh_1.6.4_linux_amd64.deb && \
-    rm browsh_1.6.4_linux_amd64.deb
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.610/quarto-0.9.610-linux-amd64.deb && \
-    dpkg -i quarto-0.9.610-linux-amd64.deb && \
-    rm quarto-0.9.610-linux-amd64.deb
 ARG NB_USER=jovyan
 ARG NB_UID=1000
 ENV USER ${NB_USER}
@@ -79,3 +69,4 @@ RUN printf 'export -n PIPENV_PIPFILE\n\
             export GRADLE_HOME=/opt/gradle/latest\n\
             export PATH=${GRADLE_HOME}/bin:${PATH}' >> ${HOME}/.bashrc
 RUN git config --global user.name "" && git config --global user.email ""
+
