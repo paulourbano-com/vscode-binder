@@ -29,7 +29,7 @@ RUN echo "${NB_USER}:${NB_USER}" | chpasswd
 RUN usermod -aG sudo ${NB_USER}
 WORKDIR ${HOME}
 RUN pip3 install --no-cache-dir notebook jupyterhub jupyterlab jupyter jupyter-server-proxy pipenv setuptools_rust
-RUN jupyter-serverextension enable --py jupyter_server_proxy
+#RUN jupyter-serverextension enable --py jupyter_server_proxy
 RUN jupyter-labextension install @jupyterlab/server-proxy
 RUN jupyter-lab build
 RUN curl -fsSL https://code-server.dev/install.sh | sh
@@ -68,5 +68,6 @@ RUN printf 'export -n PIPENV_PIPFILE\n\
             export GRADLE_HOME=/opt/gradle/latest\n\
             export PATH=${GRADLE_HOME}/bin:${PATH}' >> ${HOME}/.bashrc
 RUN git config --global user.name "" && git config --global user.email ""
+
 
 
